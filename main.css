@@ -1,0 +1,39 @@
+/* .bordered{
+    border: 1px solid blueviolet;
+} */
+#container{
+    /* height: 500px; */
+}
+.main{
+    background-color: #55ff54;
+    margin: auto 150px;
+    height: 300px;
+}
+
+.main h3, .main ul{
+    text-align: center;
+    list-style-type: square;
+}
+
+#formBox{
+    margin:auto auto;
+    width: 350px;
+    height: 50px;
+    background-color: #ff7;
+}
+
+
+form{
+    position: relative;
+    top: 10px;
+    left: 25px;
+    margin-top: 20px;
+    background-color: darkred;
+    /* height: 30px; */
+    width: 280px;
+}
+
+
+h1{
+    text-align: center;
+}
