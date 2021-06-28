@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>To Do App</title>
+</head>
+
+<body>
+    
+    <div id="container">
+        <h1>To Do App</h1>
+        <div class="main">
+
+            <div id="formBox">
+                <form id="ourForm">
+                    <input id="ourField" type="text" autocomplete="off" required>
+                    <button>Create Item</button>
+                </form>
+            </div>
+
+            <h3>Need To Do</h3>
+            <ul id="ourList">
+
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let ourForm = document.getElementById("ourForm");
+        let ourField = document.getElementById("ourField");
+        let ourList = document.getElementById("ourList");
+
+        ourForm.addEventListener("submit", (e) => {
+            e.preventDefault()
+            console.log(ourField.value);
+            createItem(ourField.value);
+        })
+
+        function createItem(x) {
+            let ourHTML = `<li>${x} <button onclick="deleteItem()">Delete</button></li>`
+            ourList.insertAdjacentHTML("beforeend", ourHTML);
+            ourField.value = ""
+            ourField.focus()
+        }
+
+        function deleteItem() {
+            // alert("Delete Requested")
+            var currentSelect = document.getElementById('ourList')
+            currentSelect.removeChild(currentSelect.lastChild);
+        }
+    </script>
+</body>
+
+</html>
