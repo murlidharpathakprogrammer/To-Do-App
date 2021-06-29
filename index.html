@@ -7,28 +7,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <title>To Do App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
 </head>
 
 <body>
-    
-    <div id="container">
-        <h1>To Do App</h1>
-        <div class="main">
 
-            <div id="formBox">
-                <form id="ourForm">
-                    <input id="ourField" type="text" autocomplete="off" required>
-                    <button>Create Item</button>
-                </form>
+
+
+    <!-- <form id="myForm" class="form-inline" action="" method="post">
+        <div class="row">
+            <div class="form-group mx-sm-3 mb-2 col">
+                <input type="text" autofocus class="form-control" name="" id="myField">
             </div>
+            <div class="col">
+                
+                <button type="submit" class="btn btn-primary mb-2">Add</button>
+            </div>
+        </div>
+    </form> -->
 
-            <h3>Need To Do</h3>
-            <ul id="ourList">
-
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://servingme.me/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://servingme.me/">About</a>
+                </li>
             </ul>
         </div>
+    </nav>
+    <div class="container">
+        <!-- <h1>To-Do App</h1> -->
+
+        <form action="" id="ourForm">
+            <div class="list-group">
+
+                <div class="list-group-item d-flex justify-content-between">
+                    <input class="create-field" id="ourField" type="text" autocomplete="off" autofocus required>
+                    <button class="btn btn-success">
+                        Create Task
+                    </button>
+                </div>
+            </div>
+
+        </form>
+        <div class="wrap-lists">
+            <h3>Tasks Need To Be Done</h3>
+        </div>
+        <ul class="list-group" id="ourList">
+            <!-- <li class="list-group-item d-flex justify-content-between align-items-center">samplebjm <button
+                        onclick="deleteItem()" class="btn btn-danger">Delete</button></li> -->
+        </ul>
     </div>
 
+    <footer class="bg-dark text-center text-white footer">
+        <!-- Grid container -->
+        <div class="p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #427eff;"
+               href="https://www.facebook.com/murlidhar.pathak.ceo"
+               target="_blank"
+               role="button"
+               ><i class="fab fa-facebook-f"></i
+              ></a>
+  
+            <!-- Twitter -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #55acee;"
+               href="https://twitter.com/Murli_D_Pathak"
+               target="_blank"
+               role="button"
+               ><i class="fab fa-twitter"></i
+              ></a>
+  
+            <!-- Google -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #c21802;"
+               href="mailto:murlidharpathakprogrammer@gmail.com"
+               role="button"
+               ><i class="fab fa-google"></i
+              ></a>
+  
+            <!-- Instagram -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);"
+               href="https://www.instagram.com/murlidhar.pathak/"
+               target="_blank"
+               role="button"
+               ><i class="fab fa-instagram"></i
+              ></a>
+  
+            <!-- Linkedin -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #0082ca;"
+               href="https://www.linkedin.com/in/murlidhar-pathak-4b70aa146/"
+               target="_blank"
+               role="button"
+               ><i class="fab fa-linkedin-in"></i
+              ></a>
+            <!-- Github -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #333333;"
+               href="https://github.com/murlidharpathakprogrammer"
+               target="_blank"
+               role="button"
+               ><i class="fab fa-github"></i
+              ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+  
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+  
     <script>
         let ourForm = document.getElementById("ourForm");
         let ourField = document.getElementById("ourField");
@@ -41,7 +164,7 @@
         })
 
         function createItem(x) {
-            let ourHTML = `<li>${x} <button onclick="deleteItem()">Delete</button></li>`
+            let ourHTML = `<li class="list-group-item d-flex justify-content-between align-items-center">${x} <button onclick="deleteItem()" class="btn btn-danger">Delete</button></li>`
             ourList.insertAdjacentHTML("beforeend", ourHTML);
             ourField.value = ""
             ourField.focus()
@@ -53,6 +176,7 @@
             currentSelect.removeChild(currentSelect.lastChild);
         }
     </script>
+
 </body>
 
 </html>
